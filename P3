@@ -1,0 +1,21 @@
+package com.company;
+
+public class Main {
+
+    public static void main(String[] args) {
+        String text = "Посадил дед репку: выросла репка большая, пребольшая. Стал дед репку из земли тянуть: тянет-потянет, вытянуть не может. Позвал дед на помощь бабку. Бабка за дедку, дедка за репку: тянут-потянут, вытянуть не могут. Позвала бабка внучку. Внучка за бабку, бабка за дедку, дедка за репку: тянут-потянут, вытянуть не могут. Кликнула внучка Жучку. Жучка за внучку, внучка за бабку, бабка за дедку, дедка за репку: тянут-потянут,вытянуть не могут. Кликнула Жучка кошку. Кошка за Жучку, Жучка за внучку, внучка за бабку, бабка за дедку, дедка за репку: тянут-потянут, вытянуть не могут. Кликнула кошка мышку. Мышка за кошку, кошка за Жучку, Жучка за внучку, внучка за бабку, бабка за дедку, дедка за репку тянут-потянут — вытянули репку!";
+        String textmax = text.replace(",", "");
+        String textmid = textmax.replace(":", "");
+        int textBeforeSentences = textmid.length();
+        String textminBegin = textmid.replace(".", "");
+        String textmin = textminBegin.replace("!", "");
+        String textminAbsolute = textmin.replace("?", "");
+        int textAfterSentences = textminAbsolute.length();
+        int sentences = textBeforeSentences - textAfterSentences;
+        System.out.println("Sentence count = " + sentences);
+        String textWords = textmid.replace(" ", "");
+        int wordsCount = textWords.length();
+        int words = textBeforeSentences - wordsCount - 1;
+        System.out.println("Words count = " + words);
+    }
+}
