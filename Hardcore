@@ -3,12 +3,14 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        String begin = "Аргентина манит негра!";
-        String work = begin.replaceAll(" !/.,;:'-", "");
-        String best = work.toLowerCase();
-        StringBuffer palindrom = new StringBuffer(best);
-        StringBuffer ending = palindrom.reverse();
-        if (palindrom.equals(ending)){
+        String begin = "Арге нти на мани т негра";
+        String work = begin.replaceAll("\\ |\\!|\\/|.\\,|;\\:|'\\-|", "");
+        System.out.println();
+        StringBuffer best = new StringBuffer(work.toLowerCase());
+        StringBuffer pal = new StringBuffer(best);
+        System.out.println(pal);
+        System.out.println(best);
+        if (best.equals(best.reverse())) {
             System.out.println("Данная строка - палиндром, поздравляю!");
         } else {
             System.out.println("Извините, но данная строка палиндромом не являестя!");
